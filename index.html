@@ -7,6 +7,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #7f7f7f;
     }
     header {
       height: 5vh;
@@ -97,40 +98,25 @@
 
     const artikelDaten = [
       {
-        titel: '7b dominiert AMG-Olympiade',
-        kategorie: 'Events',
-        vektor: [0.85, -0.24, 0.67],
+        titel: 'An object',
+        kategorie: 'Was auch immer',
+        vektor: [0.76, -0.04, 0.69],
         bild: 'https://via.placeholder.com/150',
-        text: 'Bei der AMG-Olympiade hat die 7b in fast jeder Disziplin überzeugt. Die Konkurrenz war chancenlos.'
-      },
-      {
-        titel: 'Exkursion zum Dino-Museum',
-        kategorie: 'Events',
-        vektor: [-0.12, 0.88, -0.45],
-        bild: 'https://via.placeholder.com/150',
-        text: 'Am Mittwoch besuchte die 7b das Dino-Museum. Highlight: Ein lebensgroßes T-Rex-Skelett!'
+        text: 'An object ist ein Objekt. Niemand weiß genau, was für ein Objekt, aber es ist ein Objekt.'
       }
     ];
 
     const newsDaten = [
       {
-        titel: 'Neue Hausaufgabe in Mathe',
-        kategorie: 'Hausaufgaben',
-        vektor: [0.22, -0.75, 0.33],
+        titel: 'Physik Klassenarbeit',
+        kategorie: 'Klassenarbeiten',
+        vektor: [-0.29, 0.24, -0.18],
         bild: 'https://via.placeholder.com/150',
-        text: 'Herr Müller hat neue Aufgaben zur Kurvendiskussion aufgegeben. Abgabe: Montag.',
-        datum: '2025-05-27'
-      },
-      {
-        titel: 'Klassenzimmer aufgeräumt',
-        kategorie: 'Lehrer',
-        vektor: [-0.5, 0.1, 0.6],
-        bild: 'https://via.placeholder.com/150',
-        text: 'Die 7b hat heute in der 6. Stunde ihr Klassenzimmer grundgereinigt. Respekt!',
-        datum: '2025-05-20'
+        text: 'Die Physik-Klassenarbeit wurde geschrieben, was die sechste KA in diesem Monat bedeutet.<br>Hier ist ein bisschen Motivation: Am <b><i>6. Juni</i></b> starten die Pfingstferien!',
+        datum: '2025-05-28'
       }
     ];
-
+    
     const wochentage = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
     const monatNamen = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
 
@@ -395,7 +381,7 @@
             const fullGapMin = (start - prevEnd) / 60000;
             const gapMin = Math.min(fullGapMin, 400); // Maxhöhe 400px
             const gapBox = document.createElement('div');
-            gapBox.style = `height: ${gapMin}px; background: #eee; margin: 2px 0; font-size: 10px; text-align: center; color: #666; display: flex; align-items: center; justify-content: center;`;
+            gapBox.style = `height: ${gapMin}px; background: #555; margin: 2px 0; font-size: 10px; text-align: center; color: #000; display: flex; align-items: center; justify-content: center;`;
             gapBox.textContent = `${fullGapMin} Min Pause`;
             content.appendChild(gapBox);
           }
@@ -403,7 +389,7 @@
           const fullDauerMin = (end - start) / 60000;
           const dauerMin = Math.min(fullDauerMin, 400); // Maxhöhe 400px
           const box = document.createElement('div');
-          box.style = `height: ${dauerMin}px; border: 1px solid #ccc; padding: 2px 10px; margin: 2px 0; background: white; display: flex; justify-content: space-between; align-items: center; font-size: 14px;`;
+          box.style = `height: ${dauerMin}px; border: 1px solid #333; padding: 2px 10px; margin: 2px 0; background: #666; display: flex; justify-content: space-between; align-items: center; font-size: 14px;`;
           const d = new Date(e.datetime);
           const tagDeutsch = `${wochentage[d.getDay()]}, ${d.getDate()}. ${monatNamen[d.getMonth()]} ${d.getFullYear()}`;
           box.innerHTML = `<div>${e.fach} (${fullDauerMin} Min)</div><div>${tagDeutsch}, ${e.start}–${e.end}</div>`;
