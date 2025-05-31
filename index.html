@@ -237,6 +237,18 @@
     }
 
     function renderContent() {
+      function formatDauer(minuten) {
+        minuten = Math.round(minuten);
+        const tage = Math.floor(minuten / 1440);
+        minuten %= 1440;
+        const stunden = Math.floor(minuten / 60);
+        const restMinuten = minuten % 60;
+        let parts = [];
+        if (tage > 0) parts.push(tage + ' T');
+        if (stunden > 0) parts.push(stunden + ' h');
+        if (restMinuten > 0 || parts.length === 0) parts.push(restMinuten + ' Min');
+        return parts.join(' ');
+      }
       if (currentMenu === 'plaene') {
         const content = document.getElementById('content');
         content.innerHTML = '';
@@ -382,7 +394,7 @@
             const gapMin = Math.min(fullGapMin, 400); // Maxhöhe 400px
             const gapBox = document.createElement('div');
             gapBox.style = `height: ${gapMin}px; background: #555; margin: 2px 0; font-size: 10px; text-align: center; color: #000; display: flex; align-items: center; justify-content: center;`;
-            gapBox.textContent = `${fullGapMin} Min Pause`;
+            gapBox.textContent = formatDauer(fullGapMin) + ' Pause';
             content.appendChild(gapBox);
           }
 
@@ -392,7 +404,7 @@
           box.style = `height: ${dauerMin}px; border: 1px solid #333; padding: 2px 10px; margin: 2px 0; background: #666; display: flex; justify-content: space-between; align-items: center; font-size: 14px;`;
           const d = new Date(e.datetime);
           const tagDeutsch = `${wochentage[d.getDay()]}, ${d.getDate()}. ${monatNamen[d.getMonth()]} ${d.getFullYear()}`;
-          box.innerHTML = `<div>${e.fach} (${fullDauerMin} Min)</div><div>${tagDeutsch}, ${e.start}–${e.end}</div>`;
+          box.innerHTML = `<div>${e.fach} (${formatDauer(fullDauerMin)})</div><div>${tagDeutsch}, ${e.start}–${e.end}</div>`;
           content.appendChild(box);
           prevEnd = end;
         });
@@ -410,7 +422,7 @@
       if (currentMenu === 'hauptseite') {
         content.innerHTML = '';
         const text = document.createElement('div');
-        text.textContent = 'Willkommen bei der legendären 7b. Wir sind die Besten.';
+        text.innerHTML = '<b>Willkommen</b> bei der <i>legendären</i> 7b. Wir sind die <u>Besten</u>!';
 
         const stats = document.createElement('div');
         stats.innerHTML = `
@@ -459,8 +471,7 @@
             <option value="v2-up">2. Vektorzahl -1 zu 1</option>
             <option value="v3-down">3. Vektorzahl 1 zu -1</option>
             <option value="v3-up">3. Vektorzahl -1 zu 1</option>
-            <option value="date-newest">Datum neu zu alt (nur News)</option>
-            <option value="date-oldest">Datum alt zu neu (nur News)</option>
+            ${currentMenu === 'news' ? '<option value="date-newest">Datum neu zu alt (nur News)</option><option value="date-oldest">Datum alt zu neu (nur News)</option>' : ''}
             <option value="faktor-down">7b-Faktor 1 zu -1</option>
             <option value="faktor-up">7b-Faktor -1 zu 1</option>
           `;
@@ -495,7 +506,7 @@
           full.innerHTML = `
             <h2>${artikel.titel}</h2>
             ${artikel.datum ? `Datum: ${formatDatum(artikel.datum)}<br>` : ''}
-            7b-Vektor: [${artikel.vektor.join(', ')}]<br>7b-Faktor: ${berechne7bFaktor(artikel.vektor)}<br>
+            7b-Vektor: [${artikel.vektor.join(', ')}] (7b-Faktor: ${berechne7bFaktor(artikel.vektor)})<br>
             <img src="${artikel.bild}" alt="Artikelbild"><br>
             <div>${artikel.text}</div>
             <button onclick="switchMenu(currentMenu)">Zurück</button>
@@ -520,8 +531,7 @@
             <strong>${artikel.titel}</strong><br>
             Kategorie: ${artikel.kategorie}<br>
             ${artikel.datum ? `Datum: ${formatDatum(artikel.datum)}<br>` : ''}
-            7b-Vektor: [${artikel.vektor.join(', ')}]<br>
-            7b-Faktor: ${berechne7bFaktor(artikel.vektor)}<br>
+            7b-Vektor: [${artikel.vektor.join(', ')}] (7b-Faktor: ${berechne7bFaktor(artikel.vektor)})<br>
             <img src="${artikel.bild}" alt="Artikelbild">
           `;
           listContainer.appendChild(summary);
@@ -533,3 +543,4 @@
   </script>
 </body>
 </html>
+
