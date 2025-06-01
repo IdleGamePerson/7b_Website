@@ -108,6 +108,83 @@ export const artikelDaten = [
       vektor: [0.76, 0, 0.5],
       bild: 'Pritt.jpg',
       text: '<b>Chemische Komposition</b><br> - 32% Pritt<br> - 44% Uran<br> - 20% Plutonium<br> - 4% Antimaterie<hr><b>Kosten</b><br>{10, 10 [1 [2] 2] 2} € <i>(siehe BAN-Notation)</i><hr><b>Alternative Namen</b><br> - Atompritt<br> - PrittDonald´s Pritt<br> - SCP-397942-N<br> - Pritt: 2D Edition<br> - Eher instabiles Pritt'
+    },
+    {
+      titel: 'ä',
+      kategorie: 'Was auch immer',
+      vektor: [0.4, -0.18, 0.04],
+      bild: 'A.jpg',
+      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
+    },
+    {
+      titel: 'Bubble Simulator',
+      kategorie: 'Besseres Gaming',
+      vektor: [0.35, -0.15, 0.47],
+      bild: 'Bubble.jpg',
+      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
+    },
+    {
+      titel: 'Vermeidungssimulator',
+      kategorie: 'Besseres Gaming',
+      vektor: [0.24, -0.2, 0.61],
+      bild: 'Vermeidung.jpg',
+      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
+    },
+    {
+      titel: 'Zufälliger 2D Platformer',
+      kategorie: 'Besseres Gaming',
+      vektor: [0.16, -0.38, 0.51],
+      bild: 'Platform.jpg',
+      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
+    },
+    {
+      titel: 'Ein ganz normales Mathespiel',
+      kategorie: 'Besseres Gaming',
+      vektor: [-0.1, -0.1, 0.21],
+      bild: 'mathe.jpg',
+      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
+    },
+    {
+      titel: 'Ein ganz normales Mathespiel 2',
+      kategorie: 'Besseres Gaming',
+      vektor: [-0.21, 0.13, 0.23],
+      bild: 'mathe2.jpg',
+      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
+    },
+    {
+      titel: 'Time Survival',
+      kategorie: 'Besseres Gaming',
+      vektor: [0.82, 0.33, 0.51],
+      bild: 'surv.jpg',
+      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
+    },
+    {
+      titel: 'Vermeidungssimulator 2',
+      kategorie: 'Besseres Gaming',
+      vektor: [0.31, -0.1, 0.52],
+      bild: 'Vermeidung2.jpg',
+      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
+    },
+    {
+      titel: 'Time Survival 2',
+      kategorie: 'Besseres Gaming',
+      vektor: [0.27, -0.36, 0.29],
+      bild: 'TimeSurvival2.jpg',
+      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
+    },
+    {
+      titel: '7b-Detektor',
+      kategorie: 'Was auch immer',
+      vektor: [0.6, 0.03, 0.16],
+      bild: '7b-ytes.jpg',
+      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
+    },
+    {
+      titel: 'Geldklicker',
+      kategorie: 'Besseres Gaming',
+      vektor: [0.84, 0.4, 0.71],
+      bild: 'Geldklicker.jpg',
+      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
     }
 ];
 
