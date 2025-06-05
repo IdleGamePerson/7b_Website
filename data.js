@@ -114,41 +114,34 @@ export const artikelDaten = [
       kategorie: 'Was auch immer',
       vektor: [0.4, -0.18, 0.04],
       bild: 'A.jpg',
-      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
+      text: 'Du kannst in jeder Situation mit dem Buchstaben <b>A</b> das A zum <b>Ä</b> machen, um den Text lustig zu machen.<br>Beispiel: Jä.'
     },
     {
       titel: 'Bubble Simulator',
       kategorie: 'Besseres Gaming',
       vektor: [0.35, -0.15, 0.47],
       bild: 'Bubble.jpg',
-      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
+      text: 'In Bubble Simulator (<a href="https://idlegameperson.github.io/Bubble_Simulator">siehe hier</a>) erscheint alle 5 Sekunden eine Blase mit der Zahl 0. Es kann max. 1500 Blasen geben.<br>Blasen mit gleicher Zahl (n) können zu einer Blase mit n+1 kombiniert werden, was <i>floor((2-d)<sup>n</sup>)</i> Punkte gibt. (d = 0,2)<hr><h3>Upgrades</h3><br><b>Wiederholbar</b><table border="1"><tr><td><b>Name</b></td><td><b>Kosten</b></td><td><b>Kostenmultiplikator<br>pro Kauf</b></td><td><b>Maximale<br>Kaufanzahl</td><td><b>Effekt</b></td></tr><tr><td><b>Startnummer</b></td><td>50</td><td>4,4</td><td>unendlich</td><td>Erhöht Zahl, mit der<br>Blasen erscheinen, um 1</td></tr><tr><td><b>Blasenrate</b></td><td>10</td><td>1,6</td><td>22</td><td>Blasen erscheinen 20%<br>schneller (max. 10/s)</td></tr><tr><td><b>Punktgewinn</td><td>250</td><td>1,6</td><td>unendlich</td><td>Dividiert d durch 1,25</td></tr><tr><td><b>Bereichgröße</b></td><td>1000</td><td>3,5</td><td>5</td><td>Macht Blasenbereich<br>2,5% kleiner</td></tr></table><b>Nicht wiederholbar</b><br>Fabrik: 7500 Punkte. Produziert jede Sekunde Punkte = die Quadratwurzel von der Summe der Blasenzahlen.<br>Erhöhe: 10000 Punkte. Erhöht erhaltene Punkte um (2,5*höchste Blasenzahl)%.'
     },
     {
       titel: 'Vermeidungssimulator',
       kategorie: 'Besseres Gaming',
       vektor: [0.24, -0.2, 0.61],
       bild: 'Vermeidung.jpg',
-      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
+      text: 'Vermeidungssimulator ist ein Spiel. Man spielt als ein kleiner Kreis, der sich zur Maus bewegt.<br>Es gibt einen großen Kreis, der zum kleinen geht. Auf Berührung dieser zwei Kreise verliert man.<br>Es gibt einen schwarzen Kreis. Auf Berührung der schwarzen und kleinen Kreise bekommt man 1 Punkt.<br>Alle 10 Punkte werden die kleinen und großen Kreise 10% schneller.'
     },
     {
       titel: 'Zufälliger 2D Platformer',
       kategorie: 'Besseres Gaming',
       vektor: [0.16, -0.38, 0.51],
       bild: 'Platform.jpg',
-      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
+      text: 'Dieses Spiel (<a href="https://idlegameperson.github.io/2D_Platformer/">siehe hier</a>) ist ein 2D Platformer, welcher mit WAD kontrolliert wird.<br>Man spielt als ein Quadrat. Man startet in Raum 1 im oberen linken Feld.<br>Raum n ist ein (n+19)x(n+19) Labyrinth mit (n+19)<sup>2</sup>/200 Gegnern. Man muss ins untere rechte Feld kommen, um in den nächsten Raum zu kommen.<hr><h3><b>Gegner</b></h3>Man hat 3 Leben. Gegner bewegen sich zufällig,<br>aber haben eine höhere Chance, zum Spieler zu gehen. Auf Berührung eines Gegners<br>verliert man ein Leben und der Gegner wird zu einem Zufallsfeld teleportiert.<br><b>Auf 0 Leben verliert man.</b>'
     },
     {
       titel: 'Ein ganz normales Mathespiel',
       kategorie: 'Besseres Gaming',
-      vektor: [-0.1, -0.1, 0.21],
-      bild: 'mathe.jpg',
-      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
-    },
-    {
-      titel: 'Ein ganz normales Mathespiel 2',
-      kategorie: 'Besseres Gaming',
       vektor: [-0.21, 0.13, 0.23],
-      bild: 'mathe2.jpg',
+      bild: 'mathe.jpg',
       text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
     },
     {
@@ -177,13 +170,6 @@ export const artikelDaten = [
       kategorie: 'Was auch immer',
       vektor: [0.6, 0.03, 0.16],
       bild: '7b-ytes.jpg',
-      text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
-    },
-    {
-      titel: 'Geldklicker',
-      kategorie: 'Besseres Gaming',
-      vektor: [0.84, 0.4, 0.71],
-      bild: 'Geldklicker.jpg',
       text: '<code>Text fehlt. Grund: Stress und die Ethik KA.</code>'
     }
 ];
